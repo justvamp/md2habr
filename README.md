@@ -5,8 +5,8 @@ Usage example:
     $mdFilePath   = __DIR__ . '/article.md';
     $habrFilePath = __DIR__ . '/habr_article.html';
 
-    $txt = file_get_contents($mdFilePath);
+    $mdText = file_get_contents($mdFilePath);
     $conv = new MarkdownToHabrahabrConverter;
-    $conv->convert($txt);
-    file_put_contents($habrFilePath, $txt);
+    $habrText = $conv->convert($mdText);
+    file_put_contents($habrFilePath, $habrText);
 ```
